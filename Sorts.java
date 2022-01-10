@@ -6,7 +6,9 @@ public class Sorts {
     int passes = 0;
     int swaps = 0;
     int comparsions = 0;
+    int sortSwap = 0;
     for (int i = 0; i < data.size() - 1; i++) {
+      sortSwap = 0;
       passes += 1;
       for (int j = data.size() - 1; j > i; j--) {
         comparsions += 1;
@@ -16,7 +18,14 @@ public class Sorts {
           data.set(j-1, temp);
           swaps += 1;
             }
+        else {
+          sortSwap++  
+        }
+       
           }
+      if (sortSwap == data.size()){
+        return;
+      }
         }
     System.out.println("Number of swaps: " + swaps);
     System.out.println("Number of passes: " + passes);
