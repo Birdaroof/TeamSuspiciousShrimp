@@ -19,11 +19,14 @@ public class Sorts {
           swaps += 1;
             }
         else {
-          sortSwap++  
+          sortSwap++;
         }
        
           }
-      if (sortSwap == data.size()){
+      if (sortSwap == data.size()-1-i){
+        System.out.println("Number of swaps: " + swaps);
+        System.out.println("Number of passes: " + passes);
+        System.out.println("Number of comparsions: " + comparsions);
         return;
       }
         }
@@ -94,4 +97,14 @@ public static void insertionSort( ArrayList<Comparable> data )
    System.out.println("Number of passes: " + passes);
    System.out.println("Number of comparsions: " + comparsions);
  }
+   public static ArrayList populate( int size, int lo, int hi )
+  {
+    ArrayList<Integer> retAL = new ArrayList<Integer>();
+    while( size > 0 ) {
+      //     offset + rand int on interval [lo,hi]
+      retAL.add( lo + (int)( (hi-lo+1) * Math.random() ) );
+      size--;
+    }
+    return retAL;
+  }
 }
