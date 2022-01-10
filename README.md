@@ -4,7 +4,7 @@ Team Suspicious Shrimp - Jomin Zhang + Chompsky
 
 SOTW - A Thousand Years by Christina Perri
 
-##Bubble Sort
+Bubble Sort
 Best Case Scenario: 
 0 swaps
 1 pass
